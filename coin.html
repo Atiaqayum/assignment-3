@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        
+    
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #cd0e3e, #5b979a);
+}
+
+.container {
+    background: rgb(221, 235, 100);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #4facfe;
+    color: white;
+    
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #007bff;
+    transform: scale(1.08);
+    
+}
+
+h1 {
+    font-size: 50px;
+    margin: 20px 0 10px;
+    color: rgb(39, 33, 121);
+}
+
+h3 {
+    font-size: 24px;
+    color: rgb(22, 31, 122);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button>Toss a coin</button>
+    <h1></h1>
+    <h3></h3>
+    </div>
+</body>
+<script>
+    
+    let btn = document.querySelector("button")
+    let headOne = document.querySelector("h1")
+    let headThree = document.querySelector("h3")
+    btn.addEventListener("click", ()=> {
+        let randomNum = Math.ceil(Math.random() * 2)
+        console.log(Math.ceil(Math.random() * 2));
+        headOne.textContent = randomNum
+        if(randomNum == 1){
+            headThree.textContent = "head"
+        }
+        else{
+            headThree.textContent = "tail"
+        }
+        
+    })
+</script>
+</html>
